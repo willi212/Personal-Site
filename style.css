@@ -1,0 +1,205 @@
+:root {
+    --hero-oval-height: 650px;
+    --hero-oval-width: 400px;
+    --hero-text-h1: 2.8rem;
+    --hero-text-h2: 1.8rem;
+    --intro-text-h2: 1.8rem;
+    --intro-text-p: 1.2rem;
+    --color-green: #4F7E52;
+    --color-yellow: #CDCC58;
+    --color-brown: #76583B;
+    --color-white: #F4F4C2;
+}
+
+body {
+    background-color: var(--color-white);
+}
+
+.container-hero{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url(./image/leaf-background.png);
+    background-size: 120% 120%;
+    background-position-x: 80%;
+    background-position-y: 50%;
+    background-color: var(--color-green);
+    overflow: hidden;
+}
+
+.hero-oval1 {
+    position: absolute;
+    background-color: var(--color-yellow);
+    height: var(--hero-oval-height);
+    width: var(--hero-oval-width);
+    rotate: 70deg;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.hero-oval2 {
+    position: absolute;
+    background-color: var(--color-white);
+    height: var(--hero-oval-height);
+    width: var(--hero-oval-width);
+    rotate: -70deg;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.text-hero {
+    text-align: center;
+    z-index: 2;
+}
+
+.text-hero>h1 {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-size: var(--hero-text-h1);
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: var(--color-brown);
+    padding: 0;
+    margin: 0;
+}
+
+.text-hero>h2 {
+    font-family: "Trocchi", serif;
+    font-size: var(--hero-text-h2);
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-brown);
+    padding: 0;
+    margin: 0;
+}
+
+#intro {
+    text-align: center;
+    margin: 100px 0;
+}
+
+#intro h2 {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-size: var(--intro-text-h2);
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: var(--color-brown);
+    margin-bottom: 48px;
+}
+
+#intro p {
+    font-family: "Trocchi", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+    font-size: var(--intro-text-p);
+    color: var(--color-brown);
+    /* width: 70%;
+    margin: auto; */
+}
+
+#intro .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.maple-border {
+    border:70px solid;
+    border-image-source: url(./image/maple-leaf.png);
+    border-image-slice:125;
+    border-image-repeat: repeat;
+    content:"";
+}
+
+.text-image-spider {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-image-spider > p {
+    width: 70%;
+}
+
+.text-image-spider > img {
+    width: 25%;
+}
+
+#contact-me {
+    color: var(--color-brown);
+}
+
+#contact-me h1{
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+#contact-me p {
+    font-family: "Trocchi", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#footer {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    padding:0.5rem 0 0.5rem 0;
+    display:flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-family: "Trocchi", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+}
+
+/* Mobile */
+@media (max-width: 480px) and (min-width: 319px){
+    :root {
+        --hero-oval-height: 320px;
+        --hero-oval-width: 150px;
+        --hero-text-h1: 1.2rem;
+        --hero-text-h2: 1rem;
+        --intro-text-h2: 1rem;
+        --intro-text-p: 0.8rem;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1200px) and (min-width: 481px){
+    :root {
+        --hero-oval-height: 450px;
+        --hero-oval-width: 200px;
+        --hero-text-h1: 1.8rem;
+        --hero-text-h2: 1.2rem;
+        --intro-text-h2: 1.2rem;
+        --intro-text-p: 1rem;
+    }
+}
+
+/* Intro Text Image */
+@media (max-width: 991px) {
+    .text-image-spider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .text-image-spider > p {
+        width: 100%;
+    }
+    
+    .text-image-spider > img {
+        width: 100% !important;
+    }
+}
